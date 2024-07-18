@@ -1,14 +1,17 @@
-import Image from "next/image";
-import RandomCharacter from "./_components/RandomCharacter";
+import { RandomCharacter2D } from "./_components/RandomCharacter2D";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24 bg-zinc-100">
-      <div className="flex flex-col items-center">
-      <h1 className="text-md text-semibold text-zinc-500 maruburi">지금의 글자</h1>
-      <RandomCharacter only상용한글={true} />
+    <main>
+      <div className="flex-grow flex flex-col p-12 items-center">
+        <RandomCharacter2D only상용한글={true} />
       </div>
-      <Image src="/한글도감_로고.svg" alt="한글도감 로고" width={80} height={35} />
+      <div className="flex justify-center items-center h-24">
+        <Link className="text-sm text-zinc-400 maruburi hover:text-zinc-500 underline" href="/abandoned">
+          외면 받은 글자모음...
+        </Link>
+      </div>
     </main>
   );
 }

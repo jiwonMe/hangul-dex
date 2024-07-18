@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "한글도감",
@@ -16,7 +14,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className={inter.className}>{children}</body>
+      <body className="flex h-full flex-col bg-zinc-100 relative">
+        <div className="flex justify-center items-center h-24">
+          <Image src="/한글도감_로고.svg" alt="한글도감 로고" width={80} height={35} className="h-10"/>
+        </div>
+      {children}
+      </body>
     </html>
   );
 }
