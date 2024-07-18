@@ -22,6 +22,9 @@ export const RandomCharacter2D = ({
   }, [only상용한글]);
 
   const onClick = () => {
+    // save to local storage
+    const previousCharacters = localStorage.getItem('characters') || '';
+    localStorage.setItem('characters', previousCharacters + character);
     setCharacter(getRandomCharacter(only상용한글));
   }
 
