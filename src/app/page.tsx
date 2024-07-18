@@ -8,7 +8,7 @@ export default function Home() {
         <RandomCharacter2D only상용한글={true} />
       </div>
       <div className="flex justify-center items-center h-24">
-        <Link className="text-sm text-zinc-400 maruburi hover:text-zinc-500 underline" href="/abandoned">
+        <Link className="text-sm text-zinc-400 maruburi active:text-zinc-500 underline" href="/abandoned">
           외면 받은 글자모음...
         </Link>
       </div>
