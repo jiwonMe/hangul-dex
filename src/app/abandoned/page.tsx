@@ -1,9 +1,20 @@
 'use client'
 
 import Link from "next/link";
+import { useEffect } from "react";
+import { useState } from "react";
 
 export default function AbandonedPage() {
-  const characters = localStorage.getItem('characters') || '';
+  const [characters, setCharacters] = useState('');
+
+  useEffect(() => {
+    // Check if localStorage is available
+    if (typeof window !== 'undefined') {
+      const storedCharacters = localStorage.getItem('characters') || '';
+      setCharacters(storedCharacters);
+    }
+  }, []);
+
 
   return (
     <main className="flex flex-col items-center justify-center h-screen maruburi gap-4">
