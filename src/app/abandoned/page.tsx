@@ -10,10 +10,10 @@ export default function AbandonedPage() {
     <main className="flex flex-col items-center justify-center h-full maruburi gap-4">
       선택받지 못한 {characters.length}자
       <div id="characters-container" className="max-h-[500px] overflow-y-scroll">
-        <div className="text-3xl text-zinc-800 chosun-gs p-16 w-full text-center">
+        <div className="text-3xl text-zinc-800 font-arita-serif font-extrabold p-16 w-full text-center">
         {characters.split('').map((character, index) => (
             // Generate random number of dots between characters
-            `${character}` + (index === characters.length - 1 ? '' : '.'.repeat(Math.floor(Math.random() * 5) + 1))
+            `${character}` + (index === characters.length - 1 ? '' : '.'.repeat(Math.floor(Math.random() * 3) + 1))
           ))}
         </div>
       </div>

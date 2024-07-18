@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900');
+@import url('https://webfontbox.github.io/Arita/font.css');
+
 @font-face {
   font-family: 'MaruBuri';
   src: url(https://hangeul.pstatic.net/hangeul_static/webfont/MaruBuri/MaruBuri-Regular.eot);
@@ -11,6 +13,21 @@
   font-weight: normal;
   font-style: normal;
 }
+
+@font-face {
+  font-family: 'HYGungsuh';
+  src: url('/hygungseo.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Noto Serif KR';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NotoSerifKR.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -24,8 +41,12 @@
     font-family: 'MaruBuri', sans-serif;
   }
 
-  .chosun-gs {
-    font-family: 'ChosunGs', sans-serif;
+  .noto-serif-kr {
+    font-family: 'Noto Serif KR', sans-serif;
+  }
+
+  .font-arita-serif {
+    font-family: 'Arita buri', sans-serif;
   }
 }
 

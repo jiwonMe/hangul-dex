@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { useLocalStorage } from 'usehooks-ts';
 
 export const RandomCharacter2D = ({
-  only상용한글 = false
+  only상용한글 = true
 }: {
   only상용한글: boolean
 }) => {
@@ -30,7 +30,7 @@ export const RandomCharacter2D = ({
   }
 
   return (
-    <div className='text-[200px] font-bold maruburi select-none chosun-gs active:text-zinc-700 h-[200px]' onClick={onClick}>
+    <div className='text-[200px] font-extrabold select-none font-arita-serif active:text-zinc-700 h-[200px]' onClick={onClick}>
       {fontLoaded && character} {/* Display character only if font is loaded */}
     </div>
   )

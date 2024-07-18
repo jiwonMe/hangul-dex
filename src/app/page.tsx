@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main>
       <div className="flex-grow flex flex-col p-12 items-center">
-        <RandomCharacter2D only상용한글={true} />
+        <RandomCharacter2D only상용한글={false} />
       </div>
       <div className="flex justify-center items-center h-24">
         <LinkToAbandoned />
