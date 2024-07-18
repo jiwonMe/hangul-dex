@@ -24,9 +24,13 @@ const RandomCharacter = () => {
     setCharacter(randomCharacter);
   }, []);
 
+  const handleClick = () => {
+    setCharacter(getRandomCharacter());
+  }
+
   return (
-    <div className="flex items-center justify-center">
-      <h1 className="text-[200px] font-bold text-center leading-tight">{`"${character}"`}</h1>
+    <div className="flex items-center justify-center select-none">
+      <h1 className="text-[200px] font-bold text-center leading-tight" onClick={handleClick}>{`${character}`}</h1>
     </div>
   )
 }
