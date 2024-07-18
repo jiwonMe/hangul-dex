@@ -30,7 +30,7 @@ export const RandomCharacter2D = ({
   }
 
   return (
-    <div className='text-[200px] font-bold maruburi select-none chosun-gs active:text-red-700 h-[200px]' onClick={onClick}>
+    <div className='text-[200px] font-bold maruburi select-none chosun-gs active:text-zinc-700 h-[200px]' onClick={onClick}>
       {fontLoaded && character} {/* Display character only if font is loaded */}
     </div>
   )
