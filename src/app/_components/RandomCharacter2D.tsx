@@ -4,6 +4,7 @@ import { getRandomCharacter } from '@/utils/getRandomCharacter';
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { useLocalStorage } from 'usehooks-ts';
 
 export const RandomCharacter2D = ({
   only상용한글 = false
@@ -11,6 +12,7 @@ export const RandomCharacter2D = ({
   only상용한글: boolean
 }) => {
   const [character, setCharacter] = useState<string>('');
+  const [characters, setCharacters] = useLocalStorage('characters', '');
   const [fontLoaded, setFontLoaded] = useState<boolean>(false);
 
   useEffect(() => {
@@ -19,12 +21,11 @@ export const RandomCharacter2D = ({
       setFontLoaded(true);
       setCharacter(getRandomCharacter(only상용한글)); // Set character after font is loaded
     });
-  }, [only상용한글]);
+  }, [only상용한글, setCharacter]);
 
   const onClick = () => {
     // save to local storage
-    const previousCharacters = localStorage.getItem('characters') || '';
-    localStorage.setItem('characters', previousCharacters + character);
+    setCharacters(characters + character);
     setCharacter(getRandomCharacter(only상용한글));
   }
 
