@@ -1,8 +1,6 @@
 'use client'
 
 import Link from "next/link";
-import { useEffect } from "react";
-import { useState } from "react";
 import { useLocalStorage } from "usehooks-ts";
 
 export default function AbandonedPage() {
