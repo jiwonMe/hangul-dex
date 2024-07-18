@@ -9,7 +9,7 @@ const LinkToAbandoned = () => {
 
   return (
     characters.length > 5 ? (
-      <Link className="text-sm text-zinc-400 maruburi active:text-zinc-900 underline" href="/abandoned" style={{ opacity: (characters.length - 5) / 20 }}>
+      <Link className="text-sm text-zinc-900 maruburi active:text-zinc-900 underline" href="/abandoned" style={{ opacity: (characters.length - 5) / 30 }}>
         외면 받은 글자모음...({characters.length})
       </Link>
     ) : characters.length < 5 ? (
